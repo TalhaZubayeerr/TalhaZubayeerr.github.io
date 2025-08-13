@@ -32,7 +32,6 @@ header{
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
-  text-transform: uppercase;
 }  
 
 .header-icons{
@@ -593,4 +592,5 @@ header{
     width: 100%;
     margin-bottom: 40px;
   }
+
 }
