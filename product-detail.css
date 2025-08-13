@@ -471,7 +471,7 @@ th:last-child {
   .thumbnails {
     width: 100%;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
   }
 
@@ -560,3 +560,4 @@ th:last-child {
     padding: 12px;
   }
 }
+
