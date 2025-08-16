@@ -25,8 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "Silver shadow": "#888",
     "Navy": "#000080",
     "Jetblack": "#343434",
-    "Yellow": "#FFFFE0",
+    "Yellow": "#F9ce69",
     "Pink": "#FFB6C1",
+    "Light Blue": "#9bbbfc",
+    "Midnight": "#222930",
+    "Purple": "#D8BFD8",
+    "Starlight": "#FAF6F2",
+    "Iceblue": "#d9eff7",
+    "Mint": "#A9EAC8",
+    "Light Green": "#CAD4C5",
   };
 
   // Load product data from localStorage
