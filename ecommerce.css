@@ -36,6 +36,12 @@ header{
 
 /* --- NAV base --- */
 
+.head{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .menu-toggle {
   display: none;
   font-size: 24px;
