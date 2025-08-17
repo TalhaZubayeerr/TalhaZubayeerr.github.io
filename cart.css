@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #333;
+  background: #f8f8f8;
+  padding-top: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 9%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 25px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Cart Page */
+
+.main-section{
+  margin-top: 70px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cart {
+  display: flex;
+  gap: 20px;
+  padding: 0px 10px;
+}
+
+.cart-items {
+  flex: 2;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  height: fit-content;
+}
+
+.empty-message {
+  border: none;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin: 0 20px;
+}
+
+.cart-item:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+
+.cart-item img {
+  width: 115px;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  width: 66%;
+}
+
+.item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.item-details > div strong {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  color: #222;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.remove-icon{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.qty-control{
+  background: #eee;
+  border-radius: 30px;
+  padding: 6px;
+}
+.qty-control button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.summary {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 16px;
+  height: fit-content;
+}
+
+.order-summary h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.summary-row.discount span {
+  color: red;
+  font-weight: bold;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.promo {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.promo input {
+  flex: 2;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #eee;
+}
+
+.promo button {
+  flex: 1;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkout button {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+
+
+
+/* Responsive for max-width 992px */
+@media (max-width: 992px) {
+  .container{
+    width: 100%;
+    margin: 0;
+  }
+
+  header {
+    padding: 15px 5%;
+  }
+
+  .cart {
+    flex-direction: column;
+  }
+
+  .cart-items {
+    width: 100%;
+  }
+
+  .summary {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100px;
+    margin-right: 0;
+  }
+
+  .item-right {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding-top: 8px;
+  }
+
+  .item-details > div strong {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .promo {
+    flex-direction: column;
+  }
+
+  .promo input,
+  .promo button {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+.footer {
+  background-color: #f3f4f6;
+  padding: 80px 40px 60px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 50px;
+  gap: 70px
+}
+
+.footer-left {
+  width: 25%;
+  padding-right: 40px;
+}
+
+.footer-left img {
+  max-width: 150px;
+}
+
+.footer-left p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.social-icons i {
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.4);
+  color: orange;
+}
+
+.footer-right {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-column {
+  width: 22%;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  color: #6b7280;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #111827;
+}
+
+.last-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background-color: #f5f5f5; /* হালকা ব্যাকগ্রাউন্ড */
+  border-top: 1px solid #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.id-name span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.payment img {
+  width: 66px;
+  height: 49px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.payment img:hover {
+  transform: scale(1.1);
+}
+
+
+/* ছোট স্ক্রিনের জন্য রেসপনসিভ */
+@media (max-width: 600px) {
+  .last-line {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payment img {
+    margin: 5px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-left {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}

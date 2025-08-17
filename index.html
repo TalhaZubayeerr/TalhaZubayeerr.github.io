@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce Website - Shoping Cart | Talha</title>
+  <link rel="stylesheet" href="ecommerce.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <a href="#" class="logo">Ecommerce</a>
+    <div class="header-icons">
+      <div id="wishlist">
+        <i class="ri-heart-line"></i>
+        <span class="wishlist-item-count"></span>
+      </div>
+      <div id="cart-icon">
+        <i class="ri-shopping-bag-line"></i>
+        <span class="cart-item-count"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="Wishlist">
+    <h2 class="Wishlist-title">Wishlist</h2>
+    <div class="Wishlist-content">
+         <!--<div class="Wishlist-box">
+          <img src="assets/iphone/iphone_16_pro_Desert_Titanium.webp" class="cart-img">
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Iphone 16 Pro Max</h2>
+            <span class="cart-price">৳155000</span>
+          </div>
+          <i class="ri-delete-bin-line Wishlist-remove"></i>
+        </div> -->
+      </div>
+      <div class="button-group">
+          <button class="btn-cart">Add to Cart</button>
+      </div>
+      <i class="ri-close-line" id="wishlist-close"></i>
+  </div>
+
+  <div class="cart">
+    <h2 class="cart-title">Your Cart</h2>
+    <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="assets/iphone/iphone_16_pro_Desert_Titanium.webp" class="cart-img">
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Iphone 16 Pro Max</h2>
+            <span class="cart-price">৳155000</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="ri-delete-bin-line cart-remove"></i>
+        </div> -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">৳0</div>
+      </div>
+      <div class="button-group">
+        <button class="view-btn btn-cart">View Cart</button>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+      <i class="ri-close-line" id="cart-close"></i>
+  </div>
+
+  <section class="shop">
+    <h1 class="section-title">Shop Products</h1>
+    <div id="productlist">
+      <div class="product-content">
+        <div class="product-box" data-product='{
+          "title": "Iphone 16 Pro Max",
+          "price": "৳155000",
+          "image": "assets/iphone/iphone_16_pro_Desert_Titanium.webp",
+          "colors": [
+            {"name": "Desert Titanium", "image": "assets/iphone/iphone_16_pro_Desert_Titanium.webp"},
+            {"name": "Natural Titanium", "image": "assets/iphone/16_pro_max_natural_titenium_.webp"},
+            {"name": "Black Titanium", "image": "assets/iphone/16_pro_max_black_titenium.webp"},
+            {"name": "White Titanium", "image": "assets/iphone/16_pro_max_white_titenium_.webp"}
+          ],
+          "description": "This is the latest iPhone model with cutting-edge features and elegant design.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "6.9 inches, 115.6 cm2 (~91.4% screen-to-body ratio)" },
+              { "label": "Status", "value": "Available. Released 2024, September 20" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Size", "value": "2024, September 09" },
+              { "label": "Resolution", "value": "1320 x 2868 pixels" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "iOS 18" },
+              { "label": "Chipset", "value": "Apple A18 Pro (3 nm)" },
+              { "label": "CPU", "value": "Hexa-core (2x4.04 GHz + 4x2.X GHz)" },
+              { "label": "GPU", "value": "Apple GPU (6-core graphics)" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              {
+                "label": "Triple",
+                "value": "48 MP, f/1.8, 24mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, sensor-shift OIS<br>12 MP, f/2.8, 120mm (periscope telephoto), 1/3.06\", 1.12µm, dual pixel PDAF, 3D sensor‑shift OIS,<br>5x optical zoom<br>48 MP, f/2.2, 13mm (ultrawide), 0.7µm, PDAF<br>TOF 3D LiDAR scanner (depth)"
+              },
+              {
+                "label": "Video",
+                "value": "4K@24/25/30/60/100/120fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, 3D (spatial) video/audio, stereo sound rec."
+              }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              {
+                "label": "Single",
+                "value": "12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF, OIS<br>SL 3D, (depth/biometrics sensor)"
+              },
+              {
+                "label": "Video",
+                "value": "4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS"
+              }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Capacity", "value": "4685 mAh" },
+              { "label": "Charging", "value": "Wired, PD2.0, 50% in 30 min (advertised)<br>25W wireless (MagSafe)<br>15W wireless (Qi2)<br>4.5W reverse wired" }
+            ]
+          }
+        ]
+
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone/iphone_16_pro_Desert_Titanium.webp" alt="Iphone 16 Pro Max">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 16 Pro Max</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳155000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+
+        <div class="product-box" data-product='{
+          "title":"Samsung S25 Ultra",
+          "price":"৳108000",
+          "image":"assets/s25 ultra/s25_ultra_titanium_black.webp",
+          "colors": [
+            {"name":"Black","image":"assets/s25 ultra/s25_ultra_titanium_black.webp"},
+            {"name":"Gray","image":"assets/s25 ultra/s25_ultra_titanium_gray.webp"},
+            {"name":"Blue","image":"assets/s25 ultra/s25_ultra_Titanium_Silverblue.webp"},
+            {"name":"White","image":"assets/s25 ultra/s25_ultra_Titanium_Whitesilver.webp"}
+          ],
+          "description":"Latest Samsung phone with great features.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, January 22" },
+              { "label": "Status", "value": "Available. Released 2025, February 03" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits (peak)" },
+              { "label": "Size", "value": "6.9 inches, 116.9 cm2 (~92.5% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1440 x 3120 pixels, 19.5:9 ratio (~505 ppi density)" },
+              { "label": "Protection", "value": "Corning Gorilla Armor 2" },
+              { "label": "Features", "value": "Always-on display, DX anti-reflective coating" },
+              { "label": "Weight", "value": "218 g (7.69 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, up to 7 major Android upgrades, One UI 7" },
+              { "label": "Chipset", "value": "Qualcomm Snapdragon 8 Gen 4 (3 nm)" },
+              { "label": "CPU", "value": "Octa-core (2x4.47 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+              { "label": "GPU", "value": "Adreno 830" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Quad", "value": "200 MP, f/1.7, 24mm (wide), 1/1.3\", 0.6µm, multi-directional PDAF, OIS; 10 MP, f/2.4, 67mm (telephoto), 1/3.52\", 1.12µm, PDAF, OIS, 3x optical zoom; 50 MP, f/3.4, 111mm (periscope telephoto), 1/2.52\", 0.7µm, PDAF, OIS, 5x optical zoom; 50 MP, f/1.9, 120˚ (ultrawide), 0.7µm, dual pixel PDAF, Super Steady video" },
+              { "label": "Features", "value": "Laser AF, Best Face, LED flash, auto-HDR, panorama" },
+              { "label": "Video", "value": "8K@24/30fps, 4K@30/60/120fps, 1080p@30/60/120/240fps, 10-bit HDR, HDR10+, stereo sound rec., gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "12 MP, f/2.2, 26mm (wide), 1/3.2\", 1.12µm, dual pixel PDAF" },
+              { "label": "Features", "value": "HDR, HDR10+" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30fps" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Ion" },
+              { "label": "Capacity", "value": "5000 mAh" },
+              { "label": "Charging", "value": "45W wired, PD3.0, 65% in 30 min<br>15W wireless (Qi2 Ready)<br>4.5W reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/s25 ultra/s25_ultra_titanium_black.webp" alt="Samsung S25 Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Samsung S25 Ultra</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳108000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Samsung Z Fold 7",
+          "price":"৳170000",
+          "image":"assets/Z fold 7/Blue.webp",
+          "colors": [
+            {"name":"Navy","image":"assets/Z fold 7/Blue.webp"},
+            {"name":"Jetblack","image":"assets/Z fold 7/Jetblack.webp"},
+            {"name":"Silver","image":"assets/Z fold 7/Silver.webp"}
+          ],
+          "description":"Latest Samsung phone with great features.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, July 09" },
+              { "label": "Status", "value": "Available. Released 2025, July 25" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "Foldable Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits (peak)" },
+              { "label": "Size", "value": "8.0 inches, 204.2 cm2 (~90.0% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1968 x 2184 pixels (~368 ppi density)" },
+              { "label": "Features", "value": "Titanium plate layer for display support" },
+              { "label": "Cover display", "value": "Dynamic LTPO AMOLED 2X, 120Hz, Corning Gorilla Glass Ceramic 2, 6.5 inches, 1080 x 2520 pixels, 422 ppi" },
+              { "label": "Weight", "value": "215 g (7.58 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 16, up to 7 major Android upgrades, One UI 8" },
+              { "label": "Chipset", "value": "Qualcomm SM8750-AB Snapdragon 8 Elite (3 nm)" },
+              { "label": "CPU", "value": "Octa-core (2x4.32 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+              { "label": "GPU", "value": "Adreno 830 (1200 MHz)" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Triple", "value": "200 MP, f/1.7, 24mm (wide), 1/1.3\", 0.6µm, multi-directional PDAF, OIS; 10 MP, f/2.4, 67mm (telephoto), 1.0µm, PDAF, OIS, 3x optical zoom; 12 MP, f/2.2, 120˚ (ultrawide), 1.4µm, dual pixel PDAF" },
+              { "label": "Features", "value": "LED flash, HDR, panorama" },
+              { "label": "Video", "value": "8K@30fps, 4K@60fps, 1080p@60/120/240fps (gyro-EIS), 720p@960fps (gyro-EIS), HDR10+" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "10 MP, f/2.2, 18mm (ultrawide), 1.12µm" },
+              { "label": "Cover camera", "value": "10 MP, f/2.2, 24mm (wide), 1.12µm" },
+              { "label": "Features", "value": "HDR" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30/60fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Po" },
+              { "label": "Capacity", "value": "4400 mAh" },
+              { "label": "Charging", "value": "25W wired, QC2.0, 50% in 30 min<br>15W wireless<br>4.5W reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/Z fold 7/Blue.webp" alt="Samsung Z Fold 7">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Samsung Z Fold 7</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳170000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Vivo X200 Ultra",
+          "price":"৳120000",
+          "image":"assets/vivo/vivo_X200_Ultra_Red.webp",
+          "colors": [
+            {"name":"Red","image":"assets/vivo/vivo_X200_Ultra_Red.webp"},
+            {"name":"Black","image":"assets/vivo/vivo_X200_Ultra_Black.webp"},
+            {"name":"Silver","image":"assets/vivo/vivo_X200_Ultra_Silver.webp"}
+          ],
+          "description":"Powerful Vivo smartphone with stunning design.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, April 21" },
+              { "label": "Status", "value": "Available. Released 2025, April 29" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "LTPO AMOLED, 1B colors, 120Hz, Dolby Vision, HDR Vivid, 4500 nits (peak)" },
+              { "label": "Size", "value": "6.82 inches, 113.0 cm2 (~90.2% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1440 x 3168 pixels (~510 ppi density)" },
+              { "label": "Protection", "value": "Armor glass" },
+              { "label": "Weight", "value": "229 g or 232 g (8.08 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, OriginOS 5" },
+              { "label": "Chipset", "value": "Qualcomm SM8750-AB Snapdragon 8 Elite (3 nm)" },
+              { "label": "CPU", "value": "Octa-core (2x4.32 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+              { "label": "GPU", "value": "Adreno 830" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Triple", "value": "50 MP, f/1.7, 35mm (wide), 1/1.28\", 1.22µm, dual pixel PDAF, gimbal OIS; 200 MP, f/2.3, 85mm (periscope telephoto), 1/1.4\", 0.56µm, multi-directional PDAF, OIS, 3.7x optical zoom, macro 3.4:1 (optional add-on zoom lens: f/2.3, 200mm, 2.35x optical zoom, Zeiss optics); 50 MP, f/2.0, 14mm, 116˚ (ultrawide), 1/1.28\", 1.22µm, dual pixel PDAF, OIS" },
+              { "label": "Features", "value": "Laser AF, color spectrum sensor, Zeiss optics, Zeiss T* lens coating, LED flash, panorama, HDR, 3D LUT import" },
+              { "label": "Video", "value": "8K@30fps, 4K@30/60/120fps, 1080p@30/60/120/240fps, gyro-EIS, Dolby Vision HDR, 10-bit Log, HDR10+" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "50 MP, f/2.5, 24mm (wide), 1/2.76\", 0.64µm, AF" },
+              { "label": "Features", "value": "HDR" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30/60fps" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Si/C Li-Ion" },
+              { "label": "Capacity", "value": "6000 mAh" },
+              { "label": "Charging", "value": "90W wired, PD, PPS, QC, UFCS<br>40W wireless<br>Reverse wired<br>Reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/vivo/vivo_X200_Ultra_Red.webp" alt="vivo X200 Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Vivo X200 Ultra</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳120000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Pixel 9 Pro XL",
+          "price":"৳107000",
+          "image":"assets/google/px 9 pro xl  gray.webp",
+          "colors": [
+            {"name":"Gray","image":"assets/google/px 9 pro xl  gray.webp"},
+            {"name":"Black","image":"assets/google/px 9 pro xl black.webp"},
+            {"name":"Pink","image":"assets/google/px 9 pro xl pink.webp"},
+            {"name":"Silver","image":"assets/google/px 9 pro xl silver.webp"}
+          ],
+          "description":"Latest Google Pixel flagship smartphone.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2024, August 13" },
+              { "label": "Status", "value": "Available. Released 2024, August 22" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "LTPO OLED, 120Hz, HDR10+, 2000 nits (HBM), 3000 nits (peak)" },
+              { "label": "Size", "value": "6.8 inches, 109.7 cm2 (~88.0% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1344 x 2992 pixels, 20:9 ratio (~486 ppi density)" },
+              { "label": "Protection", "value": "Corning Gorilla Glass Victus 2" },
+              { "label": "Weight", "value": "221 g (7.80 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 14, upgradable to Android 15, up to 7 major Android upgrades" },
+              { "label": "Chipset", "value": "Google Tensor G4 (4 nm)" },
+              { "label": "CPU", "value": "Octa-core (1x3.1 GHz Cortex-X4 & 3x2.6 GHz Cortex-A720 & 4x1.92 GHz Cortex-A520)" },
+              { "label": "GPU", "value": "Mali-G715 MC7" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Triple", "value": "50 MP, f/1.7, 25mm (wide), 1/1.31\", 1.2µm, dual pixel PDAF, multi-zone Laser AF, OIS; 48 MP, f/2.8, 113mm (telephoto), 1/2.55\", dual pixel PDAF, OIS, 5x optical zoom; 48 MP, f/1.7, 123˚ (ultrawide), 1/2.55\", dual pixel PDAF" },
+              { "label": "Features", "value": "Multi-zone Laser AF, LED flash, Pixel Shift, Ultra-HDR, panorama, Best Take, Zoom Enhance" },
+              { "label": "Video", "value": "8K@30fps, 4K@24/30/60fps, 1080p@24/30/60/120/240fps; gyro-EIS, OIS, 10-bit HDR" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "42 MP, f/2.2, 17mm (ultrawide), PDAF" },
+              { "label": "Features", "value": "Auto-HDR, panorama" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30/60fps" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Po" },
+              { "label": "Capacity", "value": "5060 mAh" },
+              { "label": "Charging", "value": "37W wired, PD3.0, PPS, 70% in 30 min<br> 23W wireless (w/ Pixel Stand)<br> 12W wireless (w/ Qi compatible charger)<br> Reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/google/px 9 pro xl  gray.webp" alt="Pixel 9 Pro XL">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Pixel 9 Pro XL</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳107000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"OnePlus 13",
+          "price":"৳91000",
+          "image":"assets/oneplus/oneplus_13_blue.webp",
+          "colors": [
+          {"name":"Blue","image":"assets/oneplus/oneplus_13_blue.webp"},
+          {"name":"Black","image":"assets/oneplus/oneplus_13_black.webp"},
+          {"name":"White","image":"assets/oneplus/oneplus_13_white.webp"}
+          ],
+          "description":"Latest OnePlus flagship smartphone.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2024, October 30" },
+              { "label": "Status", "value": "Available. Released 2024, November 01" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "LTPO 4.1 AMOLED, 1B colors, 120Hz, Dolby Vision, HDR10+, HDR Vivid, 800 nits (typ), 1600 nits (HBM), 4500 nits (peak)" },
+              { "label": "Size", "value": "6.82 inches, 113.0 cm2 (~90.7% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1440 x 3168 pixels (~510 ppi density)" },
+              { "label": "Protection", "value": "Crystal Shield super-ceramic glass" },
+              { "label": "Features", "value": "Always-on display, Ultra HDR image support" },
+              { "label": "Weight", "value": "210 g or 213 g (7.41 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, OxygenOS 15 (International), ColorOS 15 (China)" },
+              { "label": "Chipset", "value": "Qualcomm SM8750-AB Snapdragon 8 Elite (3 nm)" },
+              { "label": "CPU", "value": "Octa-core (2x4.32 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+              { "label": "GPU", "value": "Adreno 830" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Triple", "value": "50 MP, f/1.6, 23mm (wide), 1/1.43\", 1.12µm, multi-directional PDAF, OIS; 50 MP, f/2.6, 73mm (periscope telephoto), 1/1.95\", 3x optical zoom, PDAF, OIS; 50 MP, f/2.0, 15mm, 120˚ (ultrawide), PDAF" },
+              { "label": "Features", "value": "Hasselblad Color Calibration, Dual-LED flash, HDR, panorama" },
+              { "label": "Video", "value": "8K@30fps, 4K@30/60fps, 1080p@30/60/240/480fps, Auto HDR, gyro-EIS, Dolby Vision" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "32 MP, f/2.4, 21mm (wide), 1/2.74\", 0.8µm" },
+              { "label": "Features", "value": "HDR, panorama" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30/60fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Po" },
+              { "label": "Capacity", "value": "6000 mAh" },
+              { "label": "Charging", "value": "100W wired, PD, QC, 50% in 13 min, 100% in 36 min<br>50W wireless<br>10W reverse wireless<br>5W reverse wired" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/oneplus/oneplus_13_blue.webp" alt="OnePlus 13">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">OnePlus 13</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳91000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Samsung Z Flip 7",
+          "price":"৳100000",
+          "image":"assets/Z flip 7/Galaxy_Z_Flip_7_Jetblack.webp",
+          "colors": [
+          {"name":"Navy","image":"assets/Z flip 7/Galaxy_Z_Flip_7_Blue.webp"},
+          {"name":"Coralred","image":"assets/Z flip 7/Galaxy_Z_Flip_7_Coralred.webp"},
+          {"name":"Jetblac","image":"assets/Z flip 7/Galaxy_Z_Flip_7_Jetblack.webp"}
+          ],
+          "description":"Samsung foldable phone with sleek design.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, July 09" },
+              { "label": "Status", "value": "Available. Released 2025, July 25" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "Foldable Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits (peak)" },
+              { "label": "Size", "value": "6.9 inches, 111.2 cm2 (~88.7% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1080 x 2520 pixels, 21:9 ratio (~397 ppi density)" },
+              { "label": "Features", "value": "Cover display: Super AMOLED, 120Hz, 2600 nits (peak), 4.1 inches, 948 x 1048 pixels (Gorilla Glass Victus 2)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 16, up to 7 major Android upgrades, One UI 8" },
+              { "label": "Chipset", "value": "Exynos 2500 (3 nm)" },
+              { "label": "CPU", "value": "10-core (1x3.3GHz Cortex-X5 & 2x2.74GHz Cortex-A725 & 5x2.36GHz Cortex-A725 & 2x1.8GHz Cortex-A520)" },
+              { "label": "GPU", "value": "Xclipse 950" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Dual", "value": "50 MP, f/1.8, 23mm (wide), 1/1.57\", 1.0µm, dual pixel PDAF, OIS; 12 MP, f/2.2, 13mm, 123˚ (ultrawide), 1/3.2\", 1.12µm" },
+              { "label": "Features", "value": "LED flash, HDR, panorama" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@60/120/240fps, 720p@960fps, HDR10+" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "10 MP, f/2.2, 23mm (wide), 1/3.0\", 1.22µm" },
+              { "label": "Features", "value": "HDR" },
+              { "label": "Video", "value": "4K@30/60fps" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Po" },
+              { "label": "Capacity", "value": "4300 mAh" },
+              { "label": "Charging", "value": "25W wired, QC2.0, 50% in 30 min; 15W wireless; 4.5W reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/Z flip 7/Galaxy_Z_Flip_7_Jetblack.webp" alt="Samsung Z Flip 7">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Samsung Z Flip 7</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳100000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Xiaomi 15 pro",
+          "price":"৳95000",
+          "image":"assets/xiaomi/xiaomi_15_pro_green.webp",
+          "colors": [
+          {"name":"Green","image":"assets/xiaomi/xiaomi_15_pro_green.webp"},
+          {"name":"Black","image":"assets/xiaomi/xiaomi_15_pro_black.webp"},
+          {"name":"Silver","image":"assets/xiaomi/xiaomi_15_pro_silver.webp"},
+          {"name":"White","image":"assets/xiaomi/xiaomi_15_pro_white.webp"}
+          ],
+          "description":"Latest Xiaomi flagship smartphone.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2024, October 29" },
+              { "label": "Status", "value": "Available. Released 2024, October 29" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "LTPO AMOLED, 68B colors, 120Hz, Dolby Vision, HDR10+, 3200 nits (peak)" },
+              { "label": "Size", "value": "6.73 inches, 108.9 cm2 (~89.7% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1440 x 3200 pixels, 20:9 ratio (~522 ppi density)" },
+              { "label": "Protection", "value": "Shatterproof glass (2024 gen)" },
+              { "label": "Weight", "value": "213 g or 219 g (7.51 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, HyperOS 2" },
+              { "label": "Chipset", "value": "Qualcomm SM8750-AB Snapdragon 8 Elite (3 nm)" },
+              { "label": "CPU", "value": "Octa-core (2x4.32 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+              { "label": "GPU", "value": "Adreno 830" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Triple", "value": "50 MP, f/1.4, 23mm (wide), 1/1.31\", 1.2µm, dual pixel PDAF, OIS; 50 MP, f/2.5, 120mm (periscope telephoto), PDAF (30cm - ∞), OIS, 5x optical zoom; 50 MP, f/2.2, 14mm, 115˚ (ultrawide), AF" },
+              { "label": "Features", "value": "Laser AF, Leica lens, Dual-LED dual-tone flash, HDR, panorama" },
+              { "label": "Video", "value": "8K@24/30fps (HDR), 4K@24/30/60fps (HDR10+, 10-bit Dolby Vision HDR, 10-bit LOG), 1080p@30/60/120/240/960fps, 720p@1920fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "32 MP, f/2.0, 22mm (wide), 0.7µm" },
+              { "label": "Features", "value": "HDR, panorama" },
+              { "label": "Video", "value": "4K@30/60fps, 1080p@30/60fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Po" },
+              { "label": "Capacity", "value": "6100 mAh" },
+              { "label": "Charging", "value": "90W wired, PD3.0, QC3+; 50W wireless; 10W reverse wireless" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/xiaomi/xiaomi_15_pro_green.webp" alt="Xiaomi 15 pro">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Xiaomi 15 pro</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳95000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iphone 16 Plus",
+          "price":"৳110000",
+          "image":"assets/iphone-16/iphone_16_Ultramarine.webp",
+          "colors": [
+          {"name":"Blue","image":"assets/iphone-16/iphone_16_Ultramarine.webp"},
+          {"name":"Green","image":"assets/iphone-16/iphone_16_Teal.webp"},
+          {"name":"Black","image":"assets/iphone-16/iphone_16_Black.webp"},
+          {"name":"Pink","image":"assets/iphone-16/iphone_16_Pink.webp"},
+          {"name":"White","image":"assets/iphone-16/iphone_16_White.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2024, September 09" },
+              { "label": "Status", "value": "Available. Released 2024, September 20" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "Super Retina XDR OLED, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)" },
+              { "label": "Size", "value": "6.7 inches, 110.2 cm2 (~88.0% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)" },
+              { "label": "Protection", "value": "Ceramic Shield glass (2024 gen)" },
+              { "label": "Weight", "value": "199 g (7.02 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "iOS 18" },
+              { "label": "Chipset", "value": "Apple A18 (3 nm)" },
+              { "label": "CPU", "value": "Hexa-core" },
+              { "label": "GPU", "value": "Apple GPU (5-core graphics)" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Dual", "value": "48 MP, f/1.6, 26mm (wide), 1/1.56\", 1.0µm, dual pixel PDAF, sensor-shift OIS; 12 MP, f/2.2, 13mm, 120˚ (ultrawide), 0.7µm, dual pixel PDAF" },
+              { "label": "Features", "value": "Dual-LED dual-tone flash, HDR (photo/panorama)" },
+              { "label": "Video", "value": "4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), stereo sound rec." }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF; SL 3D, (depth/biometrics sensor)" },
+              { "label": "Features", "value": "HDR, Dolby Vision HDR, 3D (spatial) audio, stereo sound rec." },
+              { "label": "Video", "value": "4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Ion" },
+              { "label": "Capacity", "value": "4674 mAh" },
+              { "label": "Charging", "value": "Wired, PD2.0, 50% in 30 min (advertised)<br>25W wireless (MagSafe)<br>15W wireless (Qi2)<br>4.5W reverse wired" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone-16/iphone_16_Ultramarine.webp" alt="Iphone 16 Plus">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 16 Plus</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳110000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iphone 15 Plus",
+          "price":"৳97000",
+          "image":"assets/iphone-15/iPhone_15_Blue.webp",
+          "colors": [
+          {"name":"Light Blue","image":"assets/iphone-15/iPhone_15_Blue.webp"},
+          {"name":"Light Green","image":"assets/iphone-15/iPhone_15_Green.webp"},
+          {"name":"Black","image":"assets/iphone-15/iPhone_15_Black.webp"},
+          {"name":"Pink","image":"assets/iphone-15/iPhone_15_Pink.webp"},
+          {"name":"Yellow","image":"assets/iphone-15/iPhone_15_Yellow.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2023, September 12" },
+              { "label": "Status", "value": "Available. Released 2023, September 22" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "Super Retina XDR OLED capacitive touchscreen" },
+              { "label": "Size", "value": "6.7 inches, 110.2 cm2 (~88.0% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)" },
+              { "label": "Protection", "value": "Scratch-resistant ceramic glass, oleophobic coating" },
+              { "label": "Features", "value": "HDR10, Dolby Vision, 1000 nits (HBM), 2000 nits (peak)" },
+              { "label": "Weight", "value": "201 g (7.09 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "iOS 17, upgradable to iOS 17.6.1, planned upgrade to iOS 18" },
+              { "label": "Chipset", "value": "Apple A16 Bionic (4 nm)" },
+              { "label": "CPU", "value": "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)" },
+              { "label": "GPU", "value": "Apple GPU (5-core graphics)" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Dual", "value": "48 MP, f/1.6, 26mm (wide), 1.0µm, dual pixel PDAF, sensor-shift OIS; 12 MP, f/2.4, 13mm, 120˚ (ultrawide)" },
+              { "label": "Features", "value": "Dual-LED dual-tone flash, HDR (photo/panorama)" },
+              { "label": "Video", "value": "4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, HDR, Dolby Vision HDR (up to 60fps), Cinematic mode (4K@30fps), stereo sound rec." }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "12 MP, f/1.9, 23mm (wide), 1/3.6\", PDAF; SL 3D, (depth/biometrics sensor)" },
+              { "label": "Features", "value": "HDR, Cinematic mode (4K@30fps)" },
+              { "label": "Video", "value": "4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Li-Ion" },
+              { "label": "Capacity", "value": "4383 mAh" },
+              { "label": "Charging", "value": "Wired, 50% in 30 min (advertised)<br>15W wireless (MagSafe)<br>7.5W wireless (Qi)" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone-15/iPhone_15_Blue.webp" alt="Iphone 15 Plus">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 15 Plus</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳97000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iphone 16",
+          "price":"৳93000",
+          "image":"assets/iphone-16/iphone_16_Teal.webp",
+          "colors": [
+          {"name":"Green","image":"assets/iphone-16/iphone_16_Teal.webp"},
+          {"name":"Black","image":"assets/iphone-16/iphone_16_Black.webp"},
+          {"name":"Pink","image":"assets/iphone-16/iphone_16_Pink.webp"},
+          {"name":"Ultramarine","image":"assets/iphone-16/iphone_16_Ultramarine.webp"},
+          {"name":"White","image":"assets/iphone-16/iphone_16_White.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone-16/iphone_16_Teal.webp" alt="Iphone 16">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 16</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳93000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iphone 15",
+          "price":"৳80000",
+          "image":"assets/iphone-15/iPhone_15_Green.webp",
+          "colors": [
+          {"name":"Light Green","image":"assets/iphone-15/iPhone_15_Green.webp"},
+          {"name":"Black","image":"assets/iphone-15/iPhone_15_Black.webp"},
+          {"name":"Pink","image":"assets/iphone-15/iPhone_15_Pink.webp"},
+          {"name":"Light Blue","image":"assets/iphone-15/iPhone_15_Blue.webp"},
+          {"name":"Yellow","image":"assets/iphone-15/iPhone_15_Yellow.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone-15/iPhone_15_Green.webp" alt="Iphone 15">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 15</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳80000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iphone 14",
+          "price":"৳70000",
+          "image":"assets/iphone-14/iPhone_14_Blue.webp",
+          "colors": [
+          {"name":"Light Blue","image":"assets/iphone-14/iPhone_14_Blue.webp"},
+          {"name":"Purple","image":"assets/iphone-14/iPhone_14_Purple.webp"},
+          {"name":"Midnight","image":"assets/iphone-14/iPhone_14_Midnight.webp"},
+          {"name":"Red","image":"assets/iphone-14/iPhone_14_Red.webp"},
+          {"name":"Yellow","image":"assets/iphone-14/iPhone_14_Yellow.webp"},
+          {"name":"Starlight","image":"assets/iphone-14/iPhone_14_Starlight.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iphone-14/iPhone_14_Blue.webp" alt="Iphone 14">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iphone 14</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳70000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Samsung S25",
+          "price":"৳82000",
+          "image":"assets/s25/s25_icyblue.webp",
+          "colors": [
+          {"name":"Iceblue","image":"assets/s25/s25_icyblue.webp"},
+          {"name":"Mint","image":"assets/s25/s25_mint.webp"},
+          {"name":"Navy","image":"assets/s25/s25_navy.webp"},
+          {"name":"Silver shadow","image":"assets/s25/s25_silver_shadow.webp"}
+          ],
+          "description":"Latest Iphone flagship smartphone."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/s25/s25_icyblue.webp" alt="Samsung S25">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Samsung S25</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳82000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iqoo 13",
+          "price":"৳68000",
+          "image":"assets/iqoo 13/bmw white.webp",
+          "colors": [
+          {"name":"White","image":"assets/iqoo 13/bmw white.webp"},
+          {"name":"Black","image":"assets/iqoo 13/alpha.webp"},
+          {"name":"Gray","image":"assets/iqoo 13/gray.webp"},
+          {"name":"Green","image":"assets/iqoo 13/green.webp"}
+          ],
+          "description":"Iqoo smartphone with performance.",
+          "specifications": [
+            {
+              "title": "Launch",
+              "rows": [
+                { "label": "Announced", "value": "2024, October 30" },
+                { "label": "Status", "value": "Available. Released 2024, November 08" }
+              ]
+            },
+            {
+              "title": "Display",
+              "rows": [
+                { "label": "Type", "value": "LTPO AMOLED, 1B colors, 144Hz, HDR10+" },
+                { "label": "Size", "value": "6.82 inches, 113.0 cm2 (~90.2% screen-to-body ratio)" },
+                { "label": "Resolution", "value": "1440 x 3168 pixels (~510 ppi density)" }
+              ]
+            },
+            {
+              "title": "Platform",
+              "rows": [
+                { "label": "OS", "value": "Android 15, OriginOS 5 (China)" },
+                { "label": "Chipset", "value": "Qualcomm SM8750-AB Snapdragon 8 Elite (3 nm)" },
+                { "label": "CPU", "value": "Octa-core (2x4.32 GHz Oryon V2 Phoenix L + 6x3.53 GHz Oryon V2 Phoenix M)" },
+                { "label": "GPU", "value": "Adreno 830" }
+              ]
+            },
+            {
+              "title": "Main Camera",
+              "rows": [
+                {
+                  "label": "Triple",
+                  "value": "50 MP, f/1.9, 23mm (wide), 1/1.56\", PDAF, OIS; 50 MP, f/1.9, 46mm (telephoto), 1/2.93\", PDAF, OIS, 2x optical zoom; 50 MP, f/2.0, (ultrawide), 1/2.76\", AF"
+                },
+                { "label": "Features", "value": "Dual-LED flash, HDR, panorama" },
+                { "label": "Video", "value": "8K@30fps, 4K@24/30/60fps, 1080p@30/60/120/240fps, gyro-EIS" }
+              ]
+            },
+            {
+              "title": "Selfie Camera",
+              "rows": [
+                { "label": "Single", "value": "32 MP, f/2.5, (wide)" },
+                { "label": "Features", "value": "HDR" },
+                { "label": "Video", "value": "1080p@30fps" }
+              ]
+            },
+            {
+              "title": "Battery",
+              "rows": [
+                { "label": "Type", "value": "Non-removable Li-Po" },
+                { "label": "Capacity", "value": "6150 mAh" },
+                { "label": "Charging", "value": "120W wired, PPS, 100% in 30 min (advertised)" }
+              ]
+            }
+          ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iqoo 13/bmw white.webp" alt="Iqoo">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iqoo 13</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳68000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Poco F7 Pro",
+          "price":"৳53000",
+          "image":"assets/poco f7/Poco_F7_Pro_Blue.webp",
+          "colors": [
+          {"name":"Blue","image":"assets/poco f7/Poco_F7_Pro_Blue.webp"},
+          {"name":"Black","image":"assets/poco f7/Poco_F7_Pro_Black.webp"},
+          {"name":"Silver","image":"assets/poco f7/Poco_F7_Pro_Silver.webp"}
+          ],
+          "description":"Poco F7 Pro with enhanced features.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, March 27" },
+              { "label": "Status", "value": "Available. Released 2025, March 27" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "AMOLED, 68B colors, 120Hz, Dolby Vision, HDR10+, 1800 nits (HBM), 3200 nits (peak)" },
+              { "label": "Size", "value": "6.67 inches, 107.4 cm2 (~89.3% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1440 x 3200 pixels, 20:9 ratio (~526 ppi density)" },
+              { "label": "Protection", "value": "Corning Gorilla Glass 7i" },
+              { "label": "Weight", "value": "206 g (7.27 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, HyperOS 2" },
+              { "label": "Chipset", "value": "Qualcomm SM8650-AB Snapdragon 8 Gen 3 (4 nm)" },
+              { "label": "CPU", "value": "Octa-core (1x3.3 GHz Cortex-X4 & 3x3.2 GHz Cortex-A720 & 2x3.0 GHz Cortex-A720 & 2x2.3 GHz Cortex-A520)" },
+              { "label": "GPU", "value": "Adreno 750" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Dual", "value": "50 MP, f/1.6, 24mm (wide), 1/1.55\", 1.0µm, dual pixel PDAF, OIS; 8 MP, f/2.2, (ultrawide) 1/4.0\", 1.12µm" },
+              { "label": "Features", "value": "Color spectrum sensor, LED flash, HDR, panorama" },
+              { "label": "Video", "value": "8K@24fps, 4K@24/30/60fps, 1080p@30/60/120/240/960fps, 720p@1920fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "20 MP, (wide)" },
+              { "label": "Features", "value": "HDR" },
+              { "label": "Video", "value": "1080p@30/60fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Si/C Li-Ion" },
+              { "label": "Capacity", "value": "6000 mAh" },
+              { "label": "Charging", "value": "90W wired, PD3.0, QC3+, 100% in 37 min" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/poco f7/Poco_F7_Pro_Blue.webp" alt="Poco F7 Pro">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Poco F7 Pro</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳63000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Poco F7",
+          "price":"৳47000",
+          "image":"assets/poco f7/Black.webp",
+          "colors": [
+          {"name":"Black","image":"assets/poco f7/Black.webp"},
+          {"name":"Cyber","image":"assets/poco f7/Cyber silver.webp"},
+          {"name":"White","image":"assets/poco f7/White.webp"}
+          ],
+          "description":"Affordable Poco smartphone.",
+          "specifications": [
+            {
+              "title": "Launch",
+              "rows": [
+                { "label": "Announced", "value": "2025, June 24" },
+                { "label": "Status", "value": "Available. Released 2025, June" }
+              ]
+            },
+            {
+              "title": "Display",
+              "rows": [
+                { "label": "Type", "value": "AMOLED, 68B colors, 120Hz, 3840Hz PWM, Dolby Vision, HDR10+, 700 nits (typ), 1700 nits (HBM), 3200 nits (peak)" },
+                { "label": "Size", "value": "6.83 inches, 114.5 cm2 (~90.2% screen-to-body ratio)" },
+                { "label": "Resolution", "value": "1280 x 2772 pixels, 19.5:9 ratio (~447 ppi density)" },
+                { "label": "Protection", "value": "Corning Gorilla Glass 7i" }
+              ]
+            },
+            {
+              "title": "Platform",
+              "rows": [
+                { "label": "OS", "value": "Android 15, HyperOS 2" },
+                { "label": "Chipset", "value": "Qualcomm SM8735 Snapdragon 8s Gen 4 (4 nm)" },
+                { "label": "CPU", "value": "Octa-core (1x3.21 GHz Cortex-X4 & 3x3.0 GHz Cortex-A720 & 2x2.8 GHz Cortex-A720 & 2x2.0 GHz Cortex-A720)" },
+                { "label": "GPU", "value": "Adreno 825" }
+              ]
+            },
+            {
+              "title": "Battery",
+              "rows": [
+                { "label": "Type", "value": "Non-removable Si/C Li-Ion" },
+                { "label": "Capacity", "value": "6500 mAh" },
+                { "label": "Charging", "value": "90W wired, PD3.0, QC3+, 80% in 30 min; 22.5W reverse wired" }
+              ]
+            },
+            {
+              "title": "Selfie Camera",
+              "rows": [
+                { "label": "Single", "value": "20 MP, f/2.2, (wide), 1/4\"" },
+                { "label": "Video", "value": "1080p@30/60fps" }
+              ]
+            },
+            {
+              "title": "Main Camera",
+              "rows": [
+                { "label": "Dual", "value": "50 MP, f/1.5, 26mm (wide), 1/1.95\", 0.8µm, PDAF, OIS; 8 MP, f/2.2, 15mm (ultrawide), 1/4.0\", 1.12µm" },
+                { "label": "Features", "value": "LED flash, HDR, panorama" },
+                { "label": "Video", "value": "4K@30/60fps, 1080p@30/60/120/240/960fps, gyro-EIS" }
+              ]
+            }
+          ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/poco f7/Black.webp" alt="Poco F7">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Poco F7</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳47000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Samsung Galaxy S24 FE",
+          "price":"৳53000",
+          "image":"assets/samsung/galaxy_s24_fe_blue.webp",
+          "colors": [
+          {"name":"Black","image":"assets/samsung/galaxy_s24_fe_blue.webp"},
+          {"name":"Cyber","image":"assets/samsung/galaxy_s24_fe_graphite.webp"},
+          {"name":"White","image":"assets/samsung/galaxy_s24_fe_mint.webp"}
+          ],
+          "description":"Popular Samsung FE model."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/samsung/galaxy_s24_fe_blue.webp" alt="Samsung Galaxy S24 FE">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Samsung S24 FE</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳53,000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Redmi Turbo 4 Pro",
+          "price":"৳36000",
+          "image":"assets/redmi/Redmi_Turbo_4_Pro_Green.webp",
+          "colors": [
+          {"name":"Blue","image":"assets/redmi/Redmi_Turbo_4_Pro_Green.webp"},
+          {"name":"Black","image":"assets/redmi/Redmi_Turbo_4_Pro_Black.webp"},
+          {"name":"Silver","image":"assets/redmi/Redmi_Turbo_4_Pro_White.webp"}
+          ],
+          "description":"Redmi Tubo 4 Pro with enhanced features.",
+          "specifications": [
+          {
+            "title": "Launch",
+            "rows": [
+              { "label": "Announced", "value": "2025, April 24" },
+              { "label": "Status", "value": "Available. Released 2025, April 24" }
+            ]
+          },
+          {
+            "title": "Display",
+            "rows": [
+              { "label": "Type", "value": "AMOLED, 68B colors, 120Hz, Dolby Vision, HDR10+, HDR Vivid, 800 nits (typ), 1800 nits (HBM), 3200 nits (peak)" },
+              { "label": "Size", "value": "6.83 inches, 114.5 cm2 (~90.2% screen-to-body ratio)" },
+              { "label": "Resolution", "value": "1280 x 2772 pixels, 19.5:9 ratio (~447 ppi density)" },
+              { "label": "Weight", "value": "219 g (7.72 oz)" }
+            ]
+          },
+          {
+            "title": "Platform",
+            "rows": [
+              { "label": "OS", "value": "Android 15, HyperOS 2" },
+              { "label": "Chipset", "value": "Qualcomm SM8735 Snapdragon 8s Gen 4 (4 nm)" },
+              { "label": "CPU", "value": "Octa-core (1x3.21 GHz Cortex-X4 & 3x3.0 GHz Cortex-A720 & 2x2.8 GHz Cortex-A720 & 2x2.0 GHz Cortex-A720)" },
+              { "label": "GPU", "value": "Adreno 825" }
+            ]
+          },
+          {
+            "title": "Main Camera",
+            "rows": [
+              { "label": "Dual", "value": "50 MP, f/1.5, 26mm (wide), 1/1.95\", 0.8µm, PDAF, OIS; 8 MP, f/2.2, 15mm (ultrawide), 1/4.0\", 1.12µm" },
+              { "label": "Features", "value": "LED flash, HDR, panorama" },
+              { "label": "Video", "value": "4K@24/30/60fps, 1080p@30/60/120/240/960fps, gyro-EIS" }
+            ]
+          },
+          {
+            "title": "Selfie Camera",
+            "rows": [
+              { "label": "Single", "value": "20 MP, f/2.2, (wide), 1/4\"" },
+              { "label": "Video", "value": "1080p@30fps" }
+            ]
+          },
+          {
+            "title": "Battery",
+            "rows": [
+              { "label": "Type", "value": "Non-removable Si/C Li-Ion" },
+              { "label": "Capacity", "value": "7550 mAh" },
+              { "label": "Charging", "value": "90W wired, PD3.0, QC3+; 22.5W reverse wired" }
+            ]
+          }
+        ]
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/redmi/Redmi_Turbo_4_Pro_Green.webp" alt="Redmi Tubo 4 Pro">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Redmi Tubo 4 Pro</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳36000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Iqoo Neo 10",
+          "price":"৳47000",
+          "image":"assets/iqoo neo/iqoo neo 10 ind red.webp",
+          "colors": [
+          {"name":"Black","image":"assets/iqoo neo/iqoo neo 10 ind red.webp"},
+          {"name":"Black","image":"assets/iqoo neo/iqoo neo 10 ind.webp"}
+          ],
+          "description":"Latest Iqoo Neo 10."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/iqoo neo/iqoo neo 10 ind red.webp" alt="Iqoo Neo 10">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Iqoo Neo 10</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳47000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Redmi Turbo 4",
+          "price":"৳30000",
+          "image":"assets/redmi/redmi_turbo_4_white.webp",
+          "colors": [
+          {"name":"White","image":"assets/redmi/redmi_turbo_4_white.webp"}
+          ],
+          "description":"Redmi Turbo 4 with decent specs."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/redmi/redmi_turbo_4_white.webp" alt="Redmi Turbo 4">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Redmi Turbo 4</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳30000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Macbok Pro M4",
+          "price":"৳200000",
+          "image":"assets/macbook m4 pro/macbook pro m4 black.webp",
+          "colors": [
+          {"name":"Black","image":"assets/macbook m4 pro/macbook pro m4 black.webp"},
+          {"name":"Silver","image":"assets/macbook m4 pro/macbook pro m4 silver.webp"}
+          ],
+          "description":"Powerful Macbook Pro M4."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/macbook m4 pro/macbook pro m4 black.webp" alt="Macbok Pro M4">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Macbok Pro M4</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳200000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Macbok Air M4",
+          "price":"৳150000",
+          "image":"assets/macbook m4/MacBook_Air_M4_Midnight.webp",
+          "colors": [
+          {"name":"Midnight","image":"assets/macbook m4/MacBook_Air_M4_Midnight.webp"},
+          {"name":"Silver","image":"assets/macbook m4/MacBook_Air_M4_Silver.webp"},
+          {"name":"SpaceGray","image":"assets/macbook m4/MacBook_Air_M4_Space_Gray.webp"},
+          {"name":"Starlight","image":"assets/macbook m4/MacBook_Air_M4_Starlight.webp"}
+          ],
+          "description":"Lightweight Macbook Air M4."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/macbook m4/MacBook_Air_M4_Midnight.webp" alt="Macbok Air M4">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Macbok Air M4</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳150000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Macbok Air M4",
+          "price":"৳72000",
+          "image":"assets/mac mini m4/Mac_Mini_M4.webp",
+          "colors": [
+          {"name":"","image":"assets/mac mini m4/Mac_Mini_M4.webp"},
+          {"name":"","image":"assets/mac mini m4/Mac_Mini_M4_2.webp"},
+          {"name":"","image":"assets/mac mini m4/Mac_Mini_M4_1.webp"}
+          ],
+          "description":"Lightweight Macbook Air M4."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/mac mini m4/Mac_Mini_M4.webp" alt=">Mac Mini M4">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Mac Mini M4</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳72000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Series 10",
+          "price":"৳170000",
+          "image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png",
+          "colors": [
+            {"name":"Natural","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png"},
+            {"name":"Slate","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Slate.png"},
+            {"name":"Gold","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Gold.png"}
+          ],
+          "description":"Latest Apple Watch Series 10."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png" alt="Apple Watch Series 10">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Series 10</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳170000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch",
+          "price":"৳120000",
+          "image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp",
+          "colors": [
+            {"name":"Gold","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp"},
+            {"name":"Natural","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Natural1.webp"},
+            {"name":"Slate","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Slate.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp" alt="Apple Watch">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳120000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Ultra",
+          "price":"৳88000",
+          "image":"assets/warch ultra/Apple_Watch_Ultra_Green.webp",
+          "colors": [
+            {"name":"Light Green","image":"assets/warch ultra/Apple_Watch_Ultra_Green.webp"},
+            {"name":"Natural","image":"assets/warch ultra/Apple_Watch_Ultra_Titanium.webp"},
+            {"name":"Yellow","image":"assets/warch ultra/eqfrqef.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/warch ultra/Apple_Watch_Ultra_Green.webp" alt="Apple Watch Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Ultra</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳88000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Ultra 2",
+          "price":"৳98000",
+          "image":"assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp",
+          "colors": [
+            {"name":"Black","image":"assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp" alt="Apple Watch Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Ultra 2</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳98000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"AirPods Max",
+          "price":"৳64000",
+          "image":"assets/airpods max/AirPods_Max_Midnight.webp",
+          "colors": [
+            {"name":"Midnight","image":"assets/airpods max/AirPods_Max_Midnight.webp"},
+            {"name":"Light Blue","image":"assets/airpods max/AirPods_Max_Blue.webp"},
+            {"name":"Yellow","image":"assets/airpods max/AirPods_Max_Orange.webp"},
+            {"name":"Purple","image":"assets/airpods max/AirPods_Max_Purple.webp"},
+            {"name":"Starlight","image":"assets/airpods max/AirPods_Max_Starlite.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/airpods max/AirPods_Max_Midnight.webp" alt="AirPods Max">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">AirPods Max</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳64000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Sony WH-1000XM6 Wireless Headphones",
+          "price":"৳45000",
+          "image":"assets/sony/Sony--WH-1000XM6-Black.png",
+          "colors": [
+            {"name":"Black","image":"assets/sony/Sony--WH-1000XM6-Black.png"},
+            {"name":"Navy","image":"assets/sony/Sony--WH-1000XM6-blue.png"},
+            {"name":"White","image":"assets/sony/Sony--WH-1000XM6-Silver.png"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/sony/Sony--WH-1000XM6-Black.png" alt="Sony WH-1000XM6">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Sony WH-1000XM6</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳45000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Dior Sauvage EDP (100ml)",
+          "price":"৳19000",
+          "image":"assets/parfume/Dior-Sauvage-EDP-Bottle.png",
+          "colors": [
+            {"image":"assets/parfume/Dior-Sauvage-EDP.png"},
+            {"image":"assets/parfume/Dior-Sauvage-EDP-Bottle.png"},
+            {"image":"assets/parfume/Dior-Sauvage--EDP.png"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/parfume/Dior-Sauvage-EDP.png" alt="Dior Sauvage EDP">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Dior Sauvage EDP</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳19000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Dior Sauvage Elixir  (100ml)",
+          "price":"৳28000",
+          "image":"assets/parfume/Dior-Sauvage-Elixir-Bottle.png",
+          "colors": [       
+            {"image":"assets/parfume/Dior-Sauvage-Elixir-Bottle.png"},
+            {"image":"assets/parfume/Dior-Sauvage-Elixir.png"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/parfume/Dior-Sauvage-Elixir.png" alt="Dior Sauvage Elixir">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Dior Sauvage Elixir</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳28000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#" class="logo">Ecommerce</a>
+        <p>We have clothes that suit your style and which you’re proud to wear. From women to men.</p>
+
+        <div class="social-icons">
+          <i class="ri-facebook-circle-fill"></i>
+          <i class="ri-instagram-line"></i>
+          <i class="ri-twitter-fill"></i>
+          <i class="ri-twitter-x-fill"></i>
+          <i class="ri-github-fill"></i>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Delivery Details</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>FAQ</h4>
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Manage Deliveries</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Payments</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Free eBooks</a></li>
+            <li><a href="#">Development Tutorial</a></li>
+            <li><a href="#">How to - Blog</a></li>
+            <li><a href="#">YouTube Playlist</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-line">
+      <div class="id-name">
+          <span>Talha Zubayer @ 2000-2023, All Rights Reserved.</span>
+        </div>
+        <div class="payment">
+        <img src="assets/payment/mastercard.png">
+        <img src="assets/payment/visa.png">
+        <img src="assets/payment/apple_card.png">
+        <img src="assets/payment/google_pay.png">
+        <img src="assets/payment/world_payment.png">
+      </div>
+    </div>
+  </footer>
+  <script src="ecommerce.js"></script>
+</body>
+</html>
