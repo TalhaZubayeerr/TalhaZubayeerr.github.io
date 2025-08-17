@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch | Talha</title>
+  <link rel="stylesheet" href="ecommerce.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <a href="ecommerce.html" class="logo">Ecommerce</a>
+
+    <!-- NAV -->
+    <nav>
+      <ul>
+        <li><a href="ecommerce.html" class="active">Phones</a></li>
+        <li><a href="mac.html">Mac</a></li>
+        <li><a href="watch.html">Watches</a></li>
+        <li><a href="headphone.html">Headphones</a></li>
+        <li><a href="perfume.html">Perfumes</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-icons">
+      <div id="wishlist">
+        <i class="ri-heart-line"></i>
+        <span class="wishlist-item-count"></span>
+      </div>
+      <div id="cart-icon">
+        <i class="ri-shopping-bag-line"></i>
+        <span class="cart-item-count"></span>
+      </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="ri-menu-line"></i>
+    </div>
+  </header>
+
+  <div class="Wishlist">
+    <h2 class="Wishlist-title">Wishlist</h2>
+    <div class="Wishlist-content">
+         <!--<div class="Wishlist-box">
+          <img src="assets/iphone/iphone_16_pro_Desert_Titanium.webp" class="cart-img">
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Iphone 16 Pro Max</h2>
+            <span class="cart-price">৳155000</span>
+          </div>
+          <i class="ri-delete-bin-line Wishlist-remove"></i>
+        </div> -->
+      </div>
+      <div class="button-group">
+          <button class="btn-cart">Add to Cart</button>
+      </div>
+      <i class="ri-close-line" id="wishlist-close"></i>
+  </div>
+
+  <div class="cart">
+    <h2 class="cart-title">Your Cart</h2>
+    <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="assets/iphone/iphone_16_pro_Desert_Titanium.webp" class="cart-img">
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Iphone 16 Pro Max</h2>
+            <span class="cart-price">৳155000</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="ri-delete-bin-line cart-remove"></i>
+        </div> -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">৳0</div>
+      </div>
+      <div class="button-group">
+        <button class="view-btn btn-cart">View Cart</button>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+      <i class="ri-close-line" id="cart-close"></i>
+  </div>
+
+  <section class="shop">
+    <h1 class="section-title">Shop Products</h1>
+    <div id="productlist">
+      <div class="product-content">
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Series 10",
+          "price":"৳170000",
+          "image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png",
+          "colors": [
+            {"name":"Natural","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png"},
+            {"name":"Slate","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Slate.png"},
+            {"name":"Gold","image":"assets/apple watch-10/Apple_Watch_Series_10_Titanium_Gold.png"}
+          ],
+          "description":"Latest Apple Watch Series 10."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/apple watch-10/Apple_Watch_Series_10_Titanium_Natural.png" alt="Apple Watch Series 10">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Series 10</a>
+            <i class="ri-verified-badge-fill"></i>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳170000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch",
+          "price":"৳120000",
+          "image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp",
+          "colors": [
+            {"name":"Gold","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp"},
+            {"name":"Natural","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Natural1.webp"},
+            {"name":"Slate","image":"assets/apple watch/Apple_Watch_Series_10_Titanium_Slate.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/apple watch/Apple_Watch_Series_10_Titanium_Gold.webp" alt="Apple Watch">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳120000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Ultra",
+          "price":"৳88000",
+          "image":"assets/warch ultra/Apple_Watch_Ultra_Green.webp",
+          "colors": [
+            {"name":"Light Green","image":"assets/warch ultra/Apple_Watch_Ultra_Green.webp"},
+            {"name":"Natural","image":"assets/warch ultra/Apple_Watch_Ultra_Titanium.webp"},
+            {"name":"Yellow","image":"assets/warch ultra/eqfrqef.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/warch ultra/Apple_Watch_Ultra_Green.webp" alt="Apple Watch Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Ultra</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳88000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+        <div class="product-box" data-product='{
+          "title":"Apple Watch Ultra 2",
+          "price":"৳98000",
+          "image":"assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp",
+          "colors": [
+            {"name":"Black","image":"assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp"}
+          ],
+          "description":"Classic Apple Watch."
+        }'>
+          <div class="img-box">
+            <a href="product-detail.html">
+              <img src="assets/watch ultra-2/Watch_Ultra_Natural_Titanium.webp" alt="Apple Watch Ultra">
+            </a>
+            <i class="ri-heart-line wishlist-icon"></i>
+            <i class="ri-loop-right-line loading-icon"></i>
+          </div>
+          <h2 class="product-title">
+            <a href="product-detail.html" class="product-link">Apple Watch Ultra 2</a>
+          </h2>
+          <div class="price-and-cart">
+            <span class="price">৳98000</span>
+            <i class="ri-shopping-bag-line add-cart" style="cursor:pointer;"></i>
+            <i class="ri-loop-right-line loading-icon" style="display:none;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#" class="logo">Ecommerce</a>
+        <p>We have clothes that suit your style and which you’re proud to wear. From women to men.</p>
+
+        <div class="social-icons">
+          <i class="ri-facebook-circle-fill"></i>
+          <i class="ri-instagram-line"></i>
+          <i class="ri-twitter-fill"></i>
+          <i class="ri-twitter-x-fill"></i>
+          <i class="ri-github-fill"></i>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Delivery Details</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>FAQ</h4>
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Manage Deliveries</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Payments</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Free eBooks</a></li>
+            <li><a href="#">Development Tutorial</a></li>
+            <li><a href="#">How to - Blog</a></li>
+            <li><a href="#">YouTube Playlist</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-line">
+      <div class="id-name">
+          <span>Talha Zubayer @ 2000-2023, All Rights Reserved.</span>
+        </div>
+        <div class="payment">
+        <img src="assets/payment/mastercard.png">
+        <img src="assets/payment/visa.png">
+        <img src="assets/payment/apple_card.png">
+        <img src="assets/payment/google_pay.png">
+        <img src="assets/payment/world_payment.png">
+      </div>
+    </div>
+  </footer>
+  <script src="ecommerce.js"></script>
+</body>
+</html>
