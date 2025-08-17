@@ -1,3 +1,35 @@
+// ==== Mobile Menu Toggle ====
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("header nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("nav ul li a");
+  const currentPage = window.location.pathname.split("/").pop(); // যেমন "mac.html"
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    // সব লিঙ্ক থেকে active রিমুভ
+    link.classList.remove("active");
+
+    // যদি লিংকের href বর্তমান পেজের সাথে মিলে যায়
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "ecommerce.html")) {
+      link.classList.add("active");
+    }
+
+    // ক্লিক ইভেন্ট
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+});
+
+
 // === Cart Drawer Open/Close ===
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
