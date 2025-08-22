@@ -276,7 +276,7 @@ header{
 
 h2 {
   font-weight: 700;
-  border-bottom: 3px solid #007bff;
+  border-bottom: 3px solid #000;
   padding-bottom: 5px;
   margin-bottom: 15px;
   font-size: 1.5rem;
@@ -573,3 +573,4 @@ th:last-child {
     padding: 12px;
   }
 }
+
