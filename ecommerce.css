@@ -513,6 +513,8 @@ nav ul li a.active {
 
   .menu-toggle {
     display: block;
+    color: black;
+    padding-top: 4px;
   }
 }
 
@@ -669,3 +671,4 @@ nav ul li a.active {
     margin-bottom: 40px;
   }
 }
+
