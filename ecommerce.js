@@ -12,6 +12,22 @@ menuCloseButton.addEventListener("click", () => {
   document.body.classList.remove("show-mobile-menu");
 });
 
+// ==== Search ====
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search-input");
+  const productBoxes = document.querySelectorAll(".product-box");
+  
+  if (!searchInput || productBoxes.length === 0) return;
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    productBoxes.forEach(box => {
+      const title = box.querySelector(".product-title").textContent.toLowerCase();
+      box.style.display = title.includes(query) ? "block" : "none";
+    });
+  });
+});
+
 
 
 // ==== Mobile Menu Toggle ====
