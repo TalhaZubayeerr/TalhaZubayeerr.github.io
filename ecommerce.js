@@ -1,11 +1,20 @@
-// ==== Mobile Menu Toggle ====
-const menuToggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("header nav");
+const menuOpenButton = document.querySelector("#menu-open-button");
+const menuCloseButton = document.querySelector("#menu-close-button");
 
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
+
+// Open menu
+menuOpenButton.addEventListener("click", () => {
+  document.body.classList.add("show-mobile-menu");
 });
 
+// Close menu
+menuCloseButton.addEventListener("click", () => {
+  document.body.classList.remove("show-mobile-menu");
+});
+
+
+
+// ==== Mobile Menu Toggle ====
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll("nav ul li a");
   const currentPage = window.location.pathname.split("/").pop(); // যেমন "mac.html"
