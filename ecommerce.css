@@ -538,7 +538,7 @@ ul.nav-menu {
 
 @media (max-width: 768px) {
   header {
-    padding: 15px 5%;
+    padding: 15px 2%;
   }
 
   .logo {
@@ -549,15 +549,16 @@ ul.nav-menu {
   .head {
     display: flex;
     align-items: center;
-    gap: 35px;
-  }
-
-  .navbar {
     gap: 20px;
   }
 
+  .navbar {
+    gap: 5px;
+  }
+
   .search-container {
-    width: 130px; 
+    width: 100px; 
+    margin-left: 8px;
   }
 
   #search-input {
@@ -631,7 +632,7 @@ ul.nav-menu {
   .navbar #menu-open-button {
     display: block;
     color: #000;
-    padding-left: 24px;
+    padding-left: 15px;
     font-size: 1.3rem;
     padding-top: 4px;
   }
