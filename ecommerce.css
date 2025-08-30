@@ -538,7 +538,7 @@ ul.nav-menu {
 
 @media (max-width: 768px) {
   header {
-    padding: 15px 2%;
+    padding: 15px 3%;
   }
 
   .logo {
@@ -792,3 +792,4 @@ ul.nav-menu {
     margin-bottom: 40px;
   }
 }
+
