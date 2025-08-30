@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mac</title>
+  <title>Ecommerce Website - Shoping Cart | Talha</title>
   <link rel="stylesheet" href="ecommerce.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -15,14 +16,28 @@
 
     <!-- NAV -->
     <div class="head">
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Phones</a></li>
-          <li><a href="mac.html">Mac</a></li>
-          <li><a href="watch.html">Watches</a></li>
-          <li><a href="headphone.html">Headphones</a></li>
-          <li><a href="perfume.html">Perfumes</a></li>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="index.html" class="active nav-link">Phones</a>
+          </li>
+          <li>
+            <a href="mac.html" class="nav-link">Mac</a>
+          </li>
+          <li>
+            <a href="watch.html" class="nav-link">Watches</a>
+          </li>
+          <li>
+            <a href="headphone.html" class="nav-link">Headphones</a>
+          </li>
+          <li>
+            <a href="perfume.html" class="nav-link">Perfumes</a>
+          </li>
         </ul>
+
+        <button id="menu-open-button" class="fas fa-bars"></button>
       </nav>
 
       <div class="header-icons">
@@ -34,9 +49,6 @@
           <i class="ri-shopping-bag-line"></i>
           <span class="cart-item-count"></span>
         </div>
-        <div class="menu-toggle" id="menu-toggle">
-          <i class="ri-menu-line"></i>
-       </div>
       </div>
     </div>
   </header>
@@ -310,6 +322,7 @@
   <script src="ecommerce.js"></script>
 </body>
 </html>
+
 
 
 
