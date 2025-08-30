@@ -53,6 +53,7 @@ header{
   max-width: 1200px;
   margin: auto;
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .product-layout {
@@ -573,5 +574,6 @@ th:last-child {
     padding: 12px;
   }
 }
+
 
 
