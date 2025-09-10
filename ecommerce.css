@@ -277,9 +277,9 @@ ul.nav-menu {
 
 .img-box .loading-icon {
   position: absolute;
-  top: 12px;    /* image এর ভিতরের, হাট আইকনের কাছাকাছি */
-  right: 12px;  /* তুমি চাইলে adjust করো */
-  font-size: 20px;  /* ছোট করে রাখো */
+  top: 12px;   
+  right: 12px;  
+  font-size: 20px; 
   color: #000;
   padding: 6px;
   background-color: #fff;
@@ -792,4 +792,3 @@ ul.nav-menu {
     margin-bottom: 40px;
   }
 }
-
