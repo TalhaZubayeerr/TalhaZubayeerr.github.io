@@ -672,6 +672,7 @@ ul.nav-menu {
     font-size: 18px;
     box-shadow: none;
     padding: 5px 10px;
+    margin-top: 2px;
     position: relative; 
     z-index: 1000;      
   }
@@ -850,3 +851,4 @@ ul.nav-menu {
     margin-bottom: 40px;
   }
 }
+
