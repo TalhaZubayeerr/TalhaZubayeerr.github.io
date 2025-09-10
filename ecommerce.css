@@ -672,9 +672,9 @@ ul.nav-menu {
     font-size: 18px;
     box-shadow: none;
     padding: 5px 10px;
+    position: relative;
+    z-index: 1000;
     margin-top: 2px;
-    position: relative; 
-    z-index: 1000;      
   }
 
   .search-toggle:checked + .search-box {
@@ -851,4 +851,5 @@ ul.nav-menu {
     margin-bottom: 40px;
   }
 }
+
 
