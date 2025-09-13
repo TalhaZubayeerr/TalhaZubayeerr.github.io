@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "Natural Titanium": "#C2BCB2",
     "Black Titanium": "#3C3C3D",
     "White Titanium": "#F2F1ED",
-    "Blue": "#0000FF",      
-    "Red": "#FF0000",        
-    "Black": "#000000",    
+    "Blue": "#0000FF",
+    "Red": "#FF0000",
+    "Black": "#000000",
     "Green": "#008000",
     "White": "#fff",
     "Silver shadow": "#888",
@@ -172,7 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
         specificationDiv.appendChild(document.createElement("br"));
       });
     } else {
-      // If no specifications, clear div and hide it (or remove)
       specificationDiv.innerHTML = "";
       specificationDiv.style.display = "none";
     }
@@ -205,19 +204,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const priceText = productPriceEl.textContent.trim();
     const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
     const image = mainImage.src;
+    const color = selectedName.textContent.trim() || "N/A";
 
     if (!title || !price || !image) {
       alert("Product info missing!");
       return;
     }
 
-    const product = { title, price, image, quantity };
+    // Unique id তৈরি করছি title + color দিয়ে
+    const id = title.toLowerCase().replace(/\s+/g, "-") + "_" + color.toLowerCase().replace(/\s+/g, "-");
+
+    const product = { id, title, price, image, quantity, color };
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const existingIndex = cart.findIndex(item =>
-      item.title.trim().toLowerCase() === title.toLowerCase()
-    );
+    const existingIndex = cart.findIndex(item => item.id === id);
 
     if (existingIndex > -1) {
       cart[existingIndex].quantity += quantity;
