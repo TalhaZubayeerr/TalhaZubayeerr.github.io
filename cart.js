@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const borderStyle = (index === cart.length - 1) ? "none" : "1px solid #ccc";
       cartItem.style.borderBottom = borderStyle;
       cartItem.style.paddingBottom = "15px";
-      cartItem.style.marginBottom = "15px";
 
       cartItem.innerHTML = `
         <div class="item-left">
