@@ -58,17 +58,43 @@ document.addEventListener("DOMContentLoaded", () => {
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const cartClose = document.querySelector("#cart-close");
+const cartButtons = document.querySelectorAll(".button-group");
 
+// কার্ট ওপেন
 cartIcon.addEventListener("click", () => cart.classList.add("active"));
-cartClose.addEventListener("click", () => cart.classList.remove("active"));
+
+// কার্ট ক্লোজ ফাংশন
+function closeCart() {
+  cart.classList.remove("active");
+}
+
+// #cart-close এর জন্য
+cartClose.addEventListener("click", closeCart);
+
+// সব button-group এর জন্যও
+cartButtons.forEach(btn => btn.addEventListener("click", closeCart));
+
 
 // === Wishlist Drawer Open/Close ===
 const wishlistIcon = document.querySelector("#wishlist");
 const wishlistDrawer = document.querySelector(".Wishlist");
 const wishlistClose = document.querySelector("#wishlist-close");
+const wishlistButtons = document.querySelectorAll(".btn-cart"); // সব btn-cart এলিমেন্ট
 
+// উইশলিস্ট ওপেন
 wishlistIcon.addEventListener("click", () => wishlistDrawer.classList.add("active"));
-wishlistClose.addEventListener("click", () => wishlistDrawer.classList.remove("active"));
+
+// উইশলিস্ট ক্লোজ ফাংশন
+function closeWishlist() {
+  wishlistDrawer.classList.remove("active");
+}
+
+// #wishlist-close এর জন্য
+wishlistClose.addEventListener("click", closeWishlist);
+
+// সব btn-cart এর জন্যও
+wishlistButtons.forEach(btn => btn.addEventListener("click", closeWishlist));
+
 
 // === Cart Content and Wishlist Content containers ===
 const cartContent = document.querySelector(".cart-content");
