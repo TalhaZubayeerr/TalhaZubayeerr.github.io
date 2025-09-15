@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 // ==== Mobile Menu Toggle ====
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll("nav ul li a");
@@ -218,20 +217,24 @@ function addToCart(productBox) {
   let productPriceText = productBox.querySelector(".price").textContent;
   const productPrice = parseFloat(productPriceText.replace(/[^\d\.]/g, '')) || 0;
 
+  // === Get color ===
+  const productData = JSON.parse(productBox.getAttribute("data-product"));
+  const selectedColor = productData.colors ? productData.colors[0].name : "Default Color";
+
   // Check if product exists in cart
-  const existingItem = cartItems.find(item => item.title === productTitle);
+  const existingItem = cartItems.find(item => item.title === productTitle && item.color === selectedColor);
   if(existingItem){
-    // যদি আগেই থাকে, quantity বাড়াও এবং পুনরায় রেন্ডার করো
     existingItem.quantity++;
     saveAndRender();
     return;
   }
 
-  // নতুন প্রোডাক্ট অ্যাড করো
+  // Add new product
   cartItems.push({
     title: productTitle,
     price: productPrice,
     image: productImgSrc,
+    color: selectedColor,
     quantity: 1
   });
 
@@ -246,9 +249,14 @@ function syncWishlistIcons(){
     if(!productBox) return;
 
     const productTitle = productBox.querySelector(".product-title").textContent;
+
+    // Get selected color from data-product
+    const productData = JSON.parse(productBox.getAttribute("data-product"));
+    const selectedColor = productData.colors ? productData.colors[0].name : "Default Color";
+
     icon.setAttribute("data-title", productTitle);
 
-    const inWishlist = wishlistItems.some(item => item.title === productTitle);
+    const inWishlist = wishlistItems.some(item => item.title === productTitle && item.color === selectedColor);
 
     if(inWishlist){
       icon.classList.remove("ri-heart-line");
@@ -262,6 +270,7 @@ function syncWishlistIcons(){
   });
 }
 
+
 // === Wishlist icon click handler with loader ===
 const wishlistIcons = document.querySelectorAll(".wishlist-icon");
 wishlistIcons.forEach(icon => {
@@ -271,6 +280,10 @@ wishlistIcons.forEach(icon => {
     const productTitle = productBox.querySelector(".product-title").textContent;
     let productPriceText = productBox.querySelector(".price").textContent;
     const productPrice = parseFloat(productPriceText.replace(/[^\d\.]/g, '')) || 0;
+
+    // Get color from data-product
+    const productData = JSON.parse(productBox.getAttribute("data-product"));
+    const selectedColor = productData.colors ? productData.colors[0].name : "Default Color";
 
     // Find the loader icon within the same img-box as the wishlist icon
     const loadingIcon = icon.closest('.img-box').querySelector('.loading-icon');
@@ -285,7 +298,7 @@ wishlistIcons.forEach(icon => {
 
       icon.setAttribute("data-title", productTitle);
 
-      const existsIndex = wishlistItems.findIndex(item => item.title === productTitle);
+      const existsIndex = wishlistItems.findIndex(item => item.title === productTitle && item.color === selectedColor);
 
       if (existsIndex === -1) {
         // Add to wishlist
@@ -296,7 +309,8 @@ wishlistIcons.forEach(icon => {
         wishlistItems.push({
           title: productTitle,
           price: productPrice,
-          image: productImgSrc
+          image: productImgSrc,
+          color: selectedColor
         });
       } else {
         // Remove from wishlist
@@ -311,6 +325,7 @@ wishlistIcons.forEach(icon => {
     }, 500);
   });
 });
+
 
 // === Add to Cart buttons on product boxes ===
 const addCartButtons = document.querySelectorAll(".add-cart");
@@ -337,7 +352,8 @@ if (wishlistAddToCartBtn) {
           title: wItem.title,
           price: wItem.price,
           image: wItem.image,
-          quantity: 1
+          quantity: 1,
+          color: wItem.color || "Default Color"  // Color add করা হলো
         });
       }
     });
